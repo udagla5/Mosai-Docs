@@ -9,26 +9,77 @@
         h1, h2 { color: #0056b3; margin-top: 30px; }
         a { color: #0056b3; text-decoration: none; }
         a:hover { text-decoration: underline; }
-        ul { padding-left: 20px; }
+        ul { padding-left: 20px; margin-top: 10px; margin-bottom: 20px; }
+        li { margin-bottom: 8px; }
+        code { background-color: #f1f1f1; padding: 2px 4px; border-radius: 4px; font-size: 0.9em; }
     </style>
 </head>
 <body>
-    <h1>Política de Privacidade</h1>
-    <p><strong>Última atualização: 31 de agosto de 2026</strong></p>
+    <h1>Política de Privacidade — Mosai</h1>
+    <p><strong>Última atualização:</strong> 20 de agosto de 2026</p>
 
-    <h2>1. Introdução</h2>
-    <p>A sua privacidade é prioridade para nós. Esta Política de Privacidade explica como o aplicativo <strong>Mosai</strong> coleta, utiliza e protege as suas informações, especialmente no que diz respeito à integração com os serviços do Google.</p>
-
-    <h2>2. Acesso e Uso de Dados do Google (Google Workspace APIs)</h2>
-    <p>O aplicativo Mosai solicita acesso ao seu Google Drive exclusivamente para ler os arquivos que você selecionar ativamente. O uso das informações recebidas das APIs do Google está sujeito à <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Política de Dados de Usuários dos Serviços de API do Google</a>, incluindo os rígidos requisitos de <strong>Uso Limitado</strong>.</p>
+    <h2>1. Dados processados</h2>
+    <p>O mosai permite importar e organizar planilhas educacionais escolhidas pelo usuário. Dependendo do conteúdo da planilha, o aplicativo poderá processar:</p>
     <ul>
-        <li><strong>O que acessamos:</strong> O aplicativo só possui acesso de leitura aos arquivos específicos (planilhas de dados e fotos) que você escolhe abrir utilizando o seletor nativo do Google Drive integrado ao app.</li>
-        <li><strong>Como usamos:</strong> Os dados (nomes, métricas, assiduidade e fotos) são processados para gerar relatórios, exportações em PDF e painéis pedagógicos dentro da interface do aplicativo.</li>
-        <li><strong>Processamento Local (On-Device):</strong> Nós <strong>não enviamos</strong> seus arquivos do Google Drive, dados de planilhas ou fotos para servidores externos. Todo o processamento e cruzamento de dados ocorre de forma nativa e isolada no seu próprio dispositivo (iPhone/iPad). Nós não vendemos, transferimos ou compartilhamos os dados escolares com terceiros.</li>
+        <li>nomes e matrículas de alunos;</li>
+        <li>turma, escola e informações cadastrais;</li>
+        <li>notas, médias, frequência e faltas;</li>
+        <li>observações e outros campos definidos na planilha;</li>
+        <li>fotografias armazenadas em uma pasta selecionada;</li>
+        <li>nomes, identificadores e metadados dos arquivos selecionados.</li>
     </ul>
+    <p>O mosai não solicita acesso a contatos, localização, microfone ou biblioteca geral de fotos do aparelho.</p>
 
-    <h2>3. Armazenamento de Dados</h2>
-    <p>As informações extraídas das planilhas são armazenadas localmente no banco de dados interno do seu dispositivo. Você mantém controle total sobre esses dados e pode excluí-los permanentemente a qualquer momento apagando o conjunto de dados no próprio aplicativo ou desinstalando-o.</p>
+    <h2>2. Acesso ao Google Drive</h2>
+    <p>O mosai utiliza as APIs oficiais do Google Drive e Google Sheets com o escopo: <code>https://www.googleapis.com/auth/drive.file</code></p>
+    <p>Esse escopo permite acessar somente os arquivos escolhidos pelo usuário e os arquivos criados ou gerenciados pelo próprio aplicativo. O login ocorre diretamente nos serviços do Google. O mosAi não recebe nem armazena a senha da Conta Google. Os tokens necessários para manter a autorização são armazenados com segurança no Keychain do iOS.</p>
+    <p>O uso das informações recebidas das APIs do Google seguirá a <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Google API Services User Data Policy</a>, incluindo seus requisitos de Uso Limitado.</p>
+
+    <h2>3. Finalidades</h2>
+    <p>Os dados são utilizados exclusivamente para:</p>
+    <ul>
+        <li>ler e interpretar planilhas;</li>
+        <li>organizar perfis de alunos;</li>
+        <li>identificar propriedades e colunas;</li>
+        <li>calcular indicadores educacionais;</li>
+        <li>apresentar gráficos e relatórios;</li>
+        <li>associar fotografias aos alunos;</li>
+        <li>gerar documentos PDF;</li>
+        <li>realizar alterações solicitadas pelo usuário em planilhas autorizadas.</li>
+    </ul>
+    <p>O mosAi não vende dados, não utiliza informações para publicidade e não fornece dados educacionais a anunciantes ou corretores de dados.</p>
+
+    <h2>4. Armazenamento</h2>
+    <p>Os conjuntos, perfis e informações importadas são armazenados localmente no aparelho. Na implementação atual, o mosAi não utiliza servidor próprio para armazenar planilhas, perfis de alunos ou credenciais.</p>
+    <p>Fotografias baixadas são mantidas temporariamente em memória. Relatórios PDF são criados no armazenamento temporário do aplicativo e somente são enviados a outros serviços quando o usuário inicia o compartilhamento.</p>
+
+    <h2>5. Arquivos Excel</h2>
+    <p>Quando um arquivo Excel .xlsx é selecionado, o arquivo original é preservado. O mosAi poderá criar no Google Drive uma cópia convertida para o formato Google Sheets. A leitura e as alterações realizadas pelo aplicativo são direcionadas à cópia convertida, sem modificar diretamente o Excel original. Essa cópia permanece no Google Drive até ser excluída pelo usuário.</p>
+
+    <h2>6. Compartilhamento</h2>
+    <p>O mosAi compartilha informações apenas com:</p>
+    <ul>
+        <li>Google, para autenticação e funcionamento do Drive e Sheets;</li>
+        <li>Apple, para recursos do iOS, armazenamento seguro e compartilhamento;</li>
+        <li>serviços ou destinatários escolhidos pelo usuário ao exportar um relatório.</li>
+    </ul>
+    <p>O aplicativo não possui SDK de publicidade nem serviço próprio de rastreamento comportamental.</p>
+
+    <h2>7. Desconexão, revogação e exclusão</h2>
+    <p>Nas Configurações, o usuário pode:</p>
+    <ul>
+        <li><strong>Desconectar o Google Drive:</strong> encerra a conexão no aparelho;</li>
+        <li><strong>Revogar o acesso:</strong> informa ao Google que o aplicativo não deve mais acessar os arquivos autorizados;</li>
+        <li><strong>Excluir dados importados:</strong> remove conjuntos e perfis armazenados localmente.</li>
+    </ul>
+    <p>Essas ações são independentes. Excluir dados locais não apaga arquivos no Google Drive. Desconectar o Google Drive não exclui dados já importados. Arquivos originais e cópias convertidas devem ser apagados diretamente pelo usuário no Google Drive.</p>
+
+    <h2>8. Dados de alunos menores de idade</h2>
+    <p>O mosAi é destinado a profissionais e instituições educacionais, não diretamente a crianças ou adolescentes. A pessoa ou instituição que importa uma planilha é responsável por possuir autorização ou base legal para tratar os dados dos alunos e por controlar o acesso aos relatórios exportados.</p>
+
+    <h2>9. Segurança e alterações</h2>
+    <p>O mosAi utiliza HTTPS nas comunicações com o Google, OAuth com PKCE, escopo limitado drive.file e armazenamento de credenciais no Keychain do iOS.</p>
+    <p>Esta Política poderá ser atualizada quando houver mudanças no funcionamento do aplicativo ou nas exigências legais. A data da versão mais recente será indicada no início deste documento.</p>
 
     <hr style="margin-top: 40px; border: 0; border-top: 1px solid #eee;">
     <p><a href="index.html">← Voltar para a página inicial</a></p>
